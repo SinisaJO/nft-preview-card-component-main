@@ -44,6 +44,12 @@ body {
     align-items: center;
 }
 
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
 /* Card design */
 
 .card {
@@ -51,7 +57,7 @@ body {
     background-color: var(--Very-dark-blue-card-BG);
     padding: 1.5em;
     border-radius: .75em;
-    max-width: 400px;
+    max-width: 350px;
     display:flex;
     flex-direction: column;
     gap: 1em;
@@ -108,11 +114,12 @@ hr {
     width: 100%;
 }
 
-h4 {
-    font-weight: 400;
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
 }
 
-h4:hover {
+h2:hover {
     color: var(--Cyan);
     cursor: pointer;
 }
@@ -136,7 +143,7 @@ span {
     border-radius: 1em;
 }
 
-h2:hover {
+h1:hover {
     color: var(--Cyan);
     cursor: pointer;
 }
@@ -168,14 +175,4 @@ h2:hover {
     flex-direction: row;
     gap: .5em;
     white-space: nowrap;
-}
-
-footer {
-    visibility: hidden;
-}
-
-img,
-picture {
-    max-width: 100%;
-    display: block;
 }
