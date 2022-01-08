@@ -112,6 +112,11 @@ h4 {
     font-weight: 400;
 }
 
+h4:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
 span {
     color: var(--Soft-blue);
 }
@@ -129,6 +134,11 @@ span {
     border-width: .125em;
     border-style: solid;
     border-radius: 1em;
+}
+
+h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
 }
 
 @media (max-width: 45em) {
