@@ -1,0 +1,166 @@
+:root {
+    /*Primary Colors */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    /*Neutral Colors */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    /*Typo */
+    --font-size-paragraph: 18px;
+    --font-family: 'Outfit', sans-serif;
+
+    --thin: 300;
+    --medium: 400;
+    --bold: 600;
+}
+
+/* --------------- */
+/* Reset values */
+/* --------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,h1,h2,h3,h4,h5,p,figure,picture {
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: white;
+    background-color: var(--Very-dark-blue-main-BG);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card design */
+
+.card {
+    align-self: center;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 1.35em;
+    border-radius: .75em;
+    max-width: 400px;
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-text {
+    font-size: 1rem;
+    color:var(--Soft-blue);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card .img-div {
+    position: relative;
+}
+
+.card .img-div div {
+    position: absolute;
+    top:0;
+    background-color: hsl(180, 100%, 50%, 60%);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card .img-div div .img-2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card .img-div div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    color:var(--Soft-blue);
+    font-weight: 400;
+}
+
+hr {
+    color: var(--Very-dark-blue-line);
+    width: 100%;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+span {
+    color: var(--Soft-blue);
+}
+
+.bottom-card {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.bottom-card img{
+    max-width: 10%;
+    border-color: white;
+    border-width: .125em;
+    border-style: solid;
+    border-radius: 1em;
+}
+
+@media (max-width: 45em) {
+    .card {
+        max-width: 280px;
+        gap: .5em;
+        padding: 1em;
+    }
+    .card-name {font-size: 1.2rem;}
+    .card-text {font-size: .85rem;}
+    .pricing {font-size: .85rem;}
+    h4 {font-size: .85rem;}
+}
+
+
+.price {
+    color: var(--Cyan);
+}
+
+.div-1 {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+    white-space: nowrap;
+}
+
+footer {
+    visibility: hidden;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
